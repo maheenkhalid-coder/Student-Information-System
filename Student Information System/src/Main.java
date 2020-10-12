@@ -97,21 +97,18 @@ public class Main implements Serializable {
 			if (studentArray[i].getRollNumber() == rollNumber) {
 
 				deleteAndShiftArray(i);
-			}	
+				numberOfStudent--;
+				break;
+			}
 		}
 
 	}
 
 	private static void deleteAndShiftArray(int deleteIndex) {
-		// TODO Auto-generated method stub
-
-		// for (int i = deleteIndex; i < numberOfStudent; i++) {
 
 		for (int i = deleteIndex; i < studentArray.length - 1; i++) {
 			studentArray[i] = studentArray[i + 1];
 		}
-
-		// }
 
 	}
 
