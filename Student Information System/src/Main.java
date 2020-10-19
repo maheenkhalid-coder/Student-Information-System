@@ -58,7 +58,8 @@ public class Main implements Serializable {
 		scanner.nextLine();
 
 		System.out.println("Email Address: ");
-		String email = scanner.nextLine();
+		String email = scanner.next();
+		scanner.nextLine();
 
 		System.out.println("\n\t\tPLease enter your courses\t\n");
 
