@@ -1,12 +1,7 @@
 
 public class Student extends Main {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	// boolean isFeesPaid = false;
-	// int fullpaid;
 	public String firstName;
 	private String lastName;
 	private int age;
@@ -24,9 +19,6 @@ public class Student extends Main {
 	private String courseName3;
 	private String courseName4;
 	private String courseName5;
-
-	// int Fees = 5000;
-	// int payment;
 
 	public Student(String fname, String lname, int Age, int rollno, String dept, String Address, int enrollYear,
 			int number, String email, String course1, String course2, String course3, String course4, String course5) {
@@ -159,16 +151,5 @@ public class Student extends Main {
 	public void setCourseName5(String courseName5) {
 		this.courseName5 = courseName5;
 	}
-
-	/*
-	 * public String toString() { System.out.println("\n"); return
-	 * ("\n \n \tStudent Information \n\n" + "Name: " + firstName + " " + lastName +
-	 * "\nAge: " +age+ "\nRoll Number: " + rollNumber+ "\nDepartment: " +
-	 * department+ "\nEnrollment year: " + EnrollmentYear +"\nAddress: " + address+
-	 * "\nPhone Number: " + phoneNumber + "\nEmail Address: " + emailAdress
-	 * +"\n \n \tStudent course Information\n\n" + "Course 01: " +courseName1+ "\n"+
-	 * "Course 02: " +courseName2+"\n"+ "course 03: " +courseName3+ "\n"+
-	 * "course 04: " +courseName4+"\n"+ "course 05: " +courseName5+"\n"); }
-	 */
 
 }

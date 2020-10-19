@@ -3,9 +3,6 @@ import java.util.Scanner;
 
 public class Main implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private static int CURRENT_LIMT = 1;
 	static Student[] studentArray = new Student[CURRENT_LIMT];
@@ -13,11 +10,6 @@ public class Main implements Serializable {
 	static Scanner scanner = new Scanner(System.in);
 
 	private static void extentStudentArray() {
-		/*
-		 * 1) New array CURRENT_LIMIT * 2 2) studenetDatabase Data => new array 3)
-		 * studenetDatabase = new_array 4) CURRENT_LIMIT =CURRENT_LIMIT *2
-		 * 
-		 */
 
 		CURRENT_LIMT *= 2;
 		Student[] extendedArray = new Student[CURRENT_LIMT];
@@ -37,34 +29,38 @@ public class Main implements Serializable {
 		if (numberOfStudent >= CURRENT_LIMT) {
 			extentStudentArray();
 		}
+
+		System.out.println("\t\tPlease enter your details:\n");
 		System.out.println("First Name: ");
-		String fname = scanner.next();
+		String fname = scanner.nextLine();
 
 		System.out.println("Last Name: ");
-		String lname = scanner.next();
+		String lname = scanner.nextLine();
 
 		System.out.println("Age: ");
 		int Age = scanner.nextInt();
 
 		System.out.println("Roll Number: ");
 		int rollno = scanner.nextInt();
+		scanner.nextLine();
 
-		System.out.println("Department(Like: CE,BEE,EE,AI): ");
-		String dept = scanner.next();
+		System.out.println("Department(Like:CE,BEE,EE,AI): ");
+		String dept = scanner.nextLine();
 
 		System.out.println("Address: ");
-		String Address = scanner.next();
+		String Address = scanner.nextLine();
 
 		System.out.println("Enrollment Year: ");
 		int enrollYear = scanner.nextInt();
 
 		System.out.println("Phone Number: ");
 		int number = scanner.nextInt();
+		scanner.nextLine();
 
 		System.out.println("Email Address: ");
-		String email = scanner.next();
+		String email = scanner.nextLine();
 
-		System.out.println("\n\tEnter your courses\t\n");
+		System.out.println("\n\t\tPLease enter your courses\t\n");
 
 		System.out.println("Course 01: ");
 		String course1 = scanner.next();
@@ -150,14 +146,15 @@ public class Main implements Serializable {
 
 	public static void main(String[] args) {
 
-		System.out.println("\t\t\tWELCOME TO THE PROJECT STUDENT INFORMATION SYSTEM\t\t\n");
+		System.out.println("\n\t\t\tWELCOME TO THE PROJECT STUDENT INFORMATION SYSTEM\t\t\n\n");
 		int code;
 		boolean isExit = false;
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 
 		do {
-			System.out.println("\t\t\t\tStudent Information Menu\n");
-			System.out.println("\t1. Add Student\t  2. View Students\t3. Search Student\t4. Delete Student\t5 Exit");
+			System.out.println("\t\t\t\tStudent Information Menu\n\n");
+			System.out.println("\t1. Add Student\t  2. View Students\t3. Search Student\t4. Delete Student\t5. Exit");
 			System.out.println("\nEnter a choice: ");
 
 			code = scanner.nextInt();
@@ -177,20 +174,21 @@ public class Main implements Serializable {
 
 			case 3:
 
-				System.out.println("Please enter your Roll Number: ");
+				System.out.println("\nPlease enter your Roll Number: ");
+				System.out.println("\n");
 				int rollNumber = scanner.nextInt();
+				System.out.println("\nYour Details: \n");
 				searchStuduent(rollNumber);
-
-				System.out.println("Student has beeen removed!!");
 
 				break;
 
 			case 4:
 
 				System.out.println("Please enter your Roll Number: ");
+				System.out.println("\n");
 				int rollNumber1 = scanner.nextInt();
-
 				deleteStudent(rollNumber1);
+				System.out.println("\nStudent has beeen removed!!");
 
 				break;
 
