@@ -7,7 +7,6 @@ public class Main implements Serializable {
 	private static int CURRENT_LIMT = 1;
 	static Student[] studentArray = new Student[CURRENT_LIMT];
 	static int numberOfStudent = 0;
-	static Scanner scanner = new Scanner(System.in);
 
 	private static void extentStudentArray() {
 
@@ -29,6 +28,8 @@ public class Main implements Serializable {
 		if (numberOfStudent >= CURRENT_LIMT) {
 			extentStudentArray();
 		}
+
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("\t\tPlease enter your details:\n");
 		System.out.println("First Name: ");
