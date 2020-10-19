@@ -1,7 +1,5 @@
+public class Student extends Course {
 
-public class Student extends Main {
-
-	private static final long serialVersionUID = 1L;
 	public String firstName;
 	private String lastName;
 	private int age;
@@ -9,7 +7,7 @@ public class Student extends Main {
 	private String department;
 	private String address;
 	private int EnrollmentYear;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String emailAdress;
 
 	int courseMarks = 100;
@@ -21,7 +19,7 @@ public class Student extends Main {
 	private String courseName5;
 
 	public Student(String fname, String lname, int Age, int rollno, String dept, String Address, int enrollYear,
-			int number, String email, String course1, String course2, String course3, String course4, String course5) {
+			String number, String email, String course1, String course2, String course3, String course4, String course5) {
 
 		firstName = fname;
 		lastName = lname;
@@ -96,11 +94,11 @@ public class Student extends Main {
 		EnrollmentYear = enrollmentYear;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

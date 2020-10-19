@@ -1,9 +1,7 @@
-import java.io.Serializable;
 import java.util.Scanner;
 
-public class Main implements Serializable {
+public class Main {
 
-	private static final long serialVersionUID = 1L;
 	private static int CURRENT_LIMT = 1;
 	static Student[] studentArray = new Student[CURRENT_LIMT];
 	static int numberOfStudent = 0;
@@ -29,6 +27,7 @@ public class Main implements Serializable {
 			extentStudentArray();
 		}
 
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("\t\tPlease enter your details:\n");
@@ -53,10 +52,10 @@ public class Main implements Serializable {
 
 		System.out.println("Enrollment Year: ");
 		int enrollYear = scanner.nextInt();
+		scanner.nextLine();
 
 		System.out.println("Phone Number: ");
-		int number = scanner.nextInt();
-		scanner.nextLine();
+		String number = scanner.next();
 
 		System.out.println("Email Address: ");
 		String email = scanner.next();
