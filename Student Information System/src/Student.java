@@ -1,4 +1,4 @@
-public class Student  {
+public class Student {
 
 	public String firstName;
 	private String lastName;
@@ -19,7 +19,8 @@ public class Student  {
 	private String courseName5;
 
 	public Student(String fname, String lname, int Age, int rollno, String dept, String Address, int enrollYear,
-			String number, String email, String course1, String course2, String course3, String course4, String course5) {
+			String number, String email, String course1, String course2, String course3, String course4,
+			String course5) {
 
 		firstName = fname;
 		lastName = lname;

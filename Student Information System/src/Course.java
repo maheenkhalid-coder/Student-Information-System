@@ -1,6 +1,5 @@
-
 public class Course {
-	
+
 	int courseMarks = 100;
 	int totalmarks = 500;
 	private String courseName1;
@@ -9,8 +8,11 @@ public class Course {
 	private String courseName4;
 	private String courseName5;
 
-	public  Course(String course1, String course2, String course3, String course4, String course5) {
-		
+	public Course() {
+	}
+
+	public Course(String course1, String course2, String course3, String course4, String course5) {
+
 		courseName1 = course1;
 		courseName2 = course2;
 		courseName3 = course3;
@@ -18,6 +20,7 @@ public class Course {
 		courseName5 = course5;
 
 	}
+
 	public String getCourseName1() {
 		return courseName1;
 	}
