@@ -124,8 +124,4 @@ public class StudentInfo extends CourseInfo {
         System.out.println("\n");
     }
 
-    public String getFeesInfo() {
-        return "Default Implemetnation";
-    }
-
 }
